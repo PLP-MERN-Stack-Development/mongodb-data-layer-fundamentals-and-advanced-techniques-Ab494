@@ -24,10 +24,10 @@ This repository contains my Week 1 MongoDB assignment, demonstrating:
 
 ## Database Setup
 
-- Database created: `plp_bookstore`
-- Collection created: `books`
-- Sample data: 12 book documents with fields:
-  - `title`, `author`, `genre`, `published_year`, `price`, `in_stock`, `pages`, `publisher`
+- **Database created:** `plp_bookstore`
+- **Collection created:** `books`
+- **Sample data:** 12 book documents with fields:  
+  `title`, `author`, `genre`, `published_year`, `price`, `in_stock`, `pages`, `publisher`
 
 ---
 
@@ -39,64 +39,63 @@ Run the following command in your terminal:
 
 ```bash
 mongosh < insert_books.js
+```
 
-This creates the plp_bookstore database and inserts sample book data.
-2. Run Queries
+This creates the `plp_bookstore` database and inserts sample book data.
 
-Execute all MongoDB queries in queries.js:
+### 2. Run Queries
 
+Execute all MongoDB queries in `queries.js`:
+
+```bash
 mongosh < queries.js
+```
 
-    Note: These scripts should be run in mongosh. Ignore VS Code warnings about use plp_bookstore.
+> **Note:** These scripts should be run in mongosh. Ignore VS Code warnings about `use plp_bookstore`.
 
-3. Verify Data
+### 3. Verify Data
 
-Open MongoDB Compass (or Atlas) to view the books collection in the plp_bookstore database and confirm your data.
-Features Implemented
-CRUD Operations
+Open MongoDB Compass (or Atlas) to view the `books` collection in the `plp_bookstore` database and confirm your data.
 
-    Find books by genre, author, or publication year
+---
 
-    Update the price of a specific book
+## Features Implemented
 
-    Delete a book by title
+### CRUD Operations
 
-    Filter books in stock
+- Find books by genre, author, or publication year
+- Update the price of a specific book
+- Delete a book by title
+- Filter books in stock
 
-Advanced Queries
+### Advanced Queries
 
-    Projection (return only title, author, price)
+- Projection (return only title, author, price)
+- Sorting by price (ascending & descending)
+- Pagination (5 books per page)
+- Find books in stock and published after 2010
 
-    Sorting by price (ascending & descending)
+### Aggregations
 
-    Pagination (5 books per page)
+- Average price of books by genre
+- Author with the most books
+- Group books by publication decade and count them
 
-    Find books in stock and published after 2010
+### Indexing
 
-Aggregations
+- Index on `title` for faster search
+- Compound index on `author` and `published_year`
+- Query performance demonstrated with `explain()`
 
-    Average price of books by genre
+---
 
-    Author with the most books
+## Screenshot
 
-    Group books by publication decade and count them
+`screenshot.png` shows the `books` collection with sample data in MongoDB Compass or Atlas.
 
-Indexing
+---
 
-    Index on title for faster search
+## Notes
 
-    Compound index on author and published_year
-
-    Query performance demonstrated with explain()
-
-Screenshot
-
-    screenshot.png shows the books collection with sample data in MongoDB Compass or Atlas.
-
-Notes
-
-    All operations were performed using mongosh.
-
-    Queries in queries.js demonstrate my understanding of MongoDB fundamentals.
-
-    
+- All operations were performed using mongosh.
+- Queries in `queries.js` demonstrate my understanding of MongoDB fundamentals.
