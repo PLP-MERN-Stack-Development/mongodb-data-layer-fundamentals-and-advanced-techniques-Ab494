@@ -57,3 +57,17 @@ Complete all the exercises in this assignment and push your code to GitHub using
 - [MongoDB Documentation](https://docs.mongodb.com/)
 - [MongoDB University](https://university.mongodb.com/)
 - [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
+
+## PLP Bookstore - MongoDB Assignment
+
+### Files Included
+- `insert_books.js` → Script to insert sample books
+- `queries.js` → MongoDB queries for CRUD, Aggregation, Indexing
+- Screenshot of MongoDB Compass showing collections and sample data
+
+### How to Run
+1. Make sure MongoDB is installed and running
+2. Open terminal and run:
+   ```bash
+   mongosh < insert_books.js
+   mongosh < queries.js
