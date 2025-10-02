@@ -1,73 +1,102 @@
 # MongoDB Fundamentals - Week 1
 
-## Setup Instructions
+## Overview
 
-Before you begin this assignment, please make sure you have the following installed:
+This repository contains my Week 1 MongoDB assignment, demonstrating:
 
-1. **MongoDB Community Edition** - [Installation Guide](https://www.mongodb.com/docs/manual/administration/install-community/)
-2. **MongoDB Shell (mongosh)** - This is included with MongoDB Community Edition
-3. **Node.js** - [Download here](https://nodejs.org/)
-
-### Node.js Package Setup
-
-Once you have Node.js installed, run the following commands in your assignment directory:
-
-```bash
-# Initialize a package.json file
-npm init -y
-
-# Install the MongoDB Node.js driver
-npm install mongodb
-```
-
-## Assignment Overview
-
-This week focuses on MongoDB fundamentals including:
-- Creating and connecting to MongoDB databases
-- CRUD operations (Create, Read, Update, Delete)
-- MongoDB queries and filters
+- Setting up a MongoDB database and collection
+- Inserting sample book data
+- Performing CRUD operations
+- Advanced queries with filtering, projection, sorting, and pagination
 - Aggregation pipelines
-- Indexing for performance
+- Indexing for performance optimization
 
-## Submission
-
-Complete all the exercises in this assignment and push your code to GitHub using the provided GitHub Classroom link.
-
-## Getting Started
-
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install MongoDB locally or set up a MongoDB Atlas account
-4. Run the provided `insert_books.js` script to populate your database
-5. Complete the tasks in the assignment document
+---
 
 ## Files Included
 
-- `Week1-Assignment.md`: Detailed assignment instructions
-- `insert_books.js`: Script to populate your MongoDB database with sample book data
+- `insert_books.js` – Script used to populate the `plp_bookstore` database with sample books.
+- `queries.js` – MongoDB queries covering CRUD operations, advanced queries, aggregations, and indexing.
+- `screenshot.png` – Screenshot showing the `plp_bookstore` database and sample data in MongoDB Compass (or Atlas).
+- `README.md` – This file explaining the project and how to run it.
 
-## Requirements
+---
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- MongoDB Shell (mongosh) or MongoDB Compass
+## Database Setup
 
-## Resources
+- Database created: `plp_bookstore`
+- Collection created: `books`
+- Sample data: 12 book documents with fields:
+  - `title`, `author`, `genre`, `published_year`, `price`, `in_stock`, `pages`, `publisher`
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [MongoDB University](https://university.mongodb.com/)
-- [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
+---
 
-## PLP Bookstore - MongoDB Assignment
+## How to Run
 
-### Files Included
-- `insert_books.js` → Script to insert sample books
-- `queries.js` → MongoDB queries for CRUD, Aggregation, Indexing
-- Screenshot of MongoDB Compass showing collections and sample data
+### 1. Populate the Database
 
-### How to Run
-1. Make sure MongoDB is installed and running
-2. Open terminal and run:
-   ```bash
-   mongosh < insert_books.js
-   mongosh < queries.js
+Run the following command in your terminal:
+
+```bash
+mongosh < insert_books.js
+
+This creates the plp_bookstore database and inserts sample book data.
+2. Run Queries
+
+Execute all MongoDB queries in queries.js:
+
+mongosh < queries.js
+
+    Note: These scripts should be run in mongosh. Ignore VS Code warnings about use plp_bookstore.
+
+3. Verify Data
+
+Open MongoDB Compass (or Atlas) to view the books collection in the plp_bookstore database and confirm your data.
+Features Implemented
+CRUD Operations
+
+    Find books by genre, author, or publication year
+
+    Update the price of a specific book
+
+    Delete a book by title
+
+    Filter books in stock
+
+Advanced Queries
+
+    Projection (return only title, author, price)
+
+    Sorting by price (ascending & descending)
+
+    Pagination (5 books per page)
+
+    Find books in stock and published after 2010
+
+Aggregations
+
+    Average price of books by genre
+
+    Author with the most books
+
+    Group books by publication decade and count them
+
+Indexing
+
+    Index on title for faster search
+
+    Compound index on author and published_year
+
+    Query performance demonstrated with explain()
+
+Screenshot
+
+    screenshot.png shows the books collection with sample data in MongoDB Compass or Atlas.
+
+Notes
+
+    All operations were performed using mongosh.
+
+    Queries in queries.js demonstrate my understanding of MongoDB fundamentals.
+
+    
